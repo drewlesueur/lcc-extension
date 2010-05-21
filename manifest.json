@@ -1,0 +1,22 @@
+{
+  "name": "LeSueur Car Company Extension",
+  "version": "1.0",
+  "description": "For warranty etc",
+  "browser_action": {
+    "default_icon" : "favicon.png",
+    "popup" : "background.html"
+  },
+  "background_page" : "background.html",
+  "content_scripts": [
+    {
+      "matches": ["http://govwaudi.com/files/ourinv2.asp", "https://*.jmagroup.com/*", "http://*.jmagroup.com/*", "http://autorates.jmfamily.com/autorates/index.jsp",
+      "http://*.karpower.com/*"
+      ],
+      "css": ["mystyles.css"],
+      "js": ["jquery.js", "jquery.livequery.js", "passwords.js","myscript.js"]
+    }
+  ],
+  "permissions": [
+    "http://api.flickr.com/", "http://search.twitter.com/"
+  ]
+}
